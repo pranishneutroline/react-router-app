@@ -1,9 +1,14 @@
 :root{
     --primary-color:#1e40af;
     --secondary-color: #93c5fd;
+    --background-color:#1e293b;
 }
 *,*::before,*::after{
     box-sizing: border-box;
+}
+body{
+    background-color: var(--background-color);
+    color:white;
 }
 .navbar{
    border-bottom:solid 1px;
@@ -22,4 +27,6 @@
     color:var(--primary-color);
     background-color: var(--secondary-color);
 }
-
+a{
+    color:white;
+}

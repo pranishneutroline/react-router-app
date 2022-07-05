@@ -1,9 +1,10 @@
 import React from "react";
 import { NavLink, Outlet, useSearchParams } from "react-router-dom";
-import { getInvoices } from "../data";
+import { getBooks } from "../data";
+import "./book.css"
 
-function Invoices() {
-  let invoices = getInvoices();
+function Books() {
+  let books = getBooks();
   let [searchParams,setSearchParams]= useSearchParams();
 
   return (
@@ -25,26 +26,29 @@ function Invoices() {
         }}
         />
 
-        {invoices.filter((invoice)=>{
+        {books.filter((book)=>{
             let filter = searchParams.get("filter");
             if(!filter) return true;
-            let name = invoice.name.toLowerCase();
+            let name = book.name.toLowerCase();
             return name.startsWith(filter.toLowerCase());
         })
         
-        .map((invoice) => (
+        .map((book) => (
           <NavLink
             style={({isActive}) => {
               return {
+                textDecoration:"none",
+                padding:".5em",
                 display: "block",
                 margin: "1rem 0",
-                color: isActive ? "red" : "blue",
+                color: isActive ? "red" : "white",
+                width:"200px"
               };
             }}
-            to={`/invoices/${invoice.number}`}
-            key={invoice.number}
+            to={`/books/${book.number}`}
+            key={book.number}
           >
-            {invoice.name}
+            {book.name}
           </NavLink>
         ))}
       </nav>
@@ -53,4 +57,4 @@ function Invoices() {
   );
 }
 
-export default Invoices;
+export default Books;

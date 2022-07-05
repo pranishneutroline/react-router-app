@@ -1,0 +1,12 @@
+:root{
+    --background-color: #1e293b;
+}
+input{
+    padding: .5rem 1rem ;
+    border-radius:1rem;
+    outline:none;
+    border:none;
+}
+NavLink{
+    list-style-type: none;
+}

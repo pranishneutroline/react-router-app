@@ -8,8 +8,8 @@ function App() {
         <h1>Bookkeeper!</h1>
 
         <nav className='navbar'>
-            <Link to="/invoices">Invoices</Link>
-            <Link to="/expenses">Expenses</Link>
+            <Link to="/books">Books</Link>
+            <Link to="/cart">Cart</Link>
         </nav>
         <Outlet />
     </div>

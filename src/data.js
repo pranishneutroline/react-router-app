@@ -1,42 +1,42 @@
-let invoices = [
+let books = [
   {
-    name: "Santa Monica",
-    number: 1995,
-    amount: "$10,800",
-    due: "12/05/1995",
+    name: "Why we sleep",
+    number: 1,
+    amount: "NPR.700",
+    category: "non-fiction, Neuroscience, Health, Psychology, Self Help",
   },
   {
-    name: "Stankonia",
-    number: 2000,
-    amount: "$8,000",
-    due: "10/31/2000",
+    name: "A man called Ove",
+    number: 2,
+    amount: "NPR.400",
+    category: "Fiction, Contemporary, Humor, Adult, Novel",
   },
   {
-    name: "Ocean Avenue",
-    number: 2003,
-    amount: "$9,500",
-    due: "07/22/2003",
+    name: "House of sky and death",
+    number: 3,
+    amount: "NPR. 500",
+    category: "Fantasy, Romance, Adult, Fairies, Fiction",
   },
   {
-    name: "Tubthumper",
-    number: 1997,
-    amount: "$14,000",
-    due: "09/01/1997",
+    name: "Wings of fire",
+    number: 4,
+    amount: "NPR. 600",
+    category: "Biography, Non-Fiction, Inspirational, Science, History",
   },
   {
-    name: "Wide Open Spaces",
-    number: 1998,
-    amount: "$4,600",
-    due: "01/27/1998",
+    name: "Harry Potter and the Cursed Child: Part One and Two",
+    number: 5,
+    amount: "NPR. 900",
+    category: " Fiction, Fantasy, Young Adult, Adventure, Childrens",
   },
 ];
-export function getInvoices() {
-  return invoices;
+export function getBooks() {
+  return books;
 }
 
-export function getInvoice(number) {
-  return invoices.find((invoice) => invoice.number === number);
+export function getBook(number) {
+  return books.find((book) => book.number === number);
 }
-export function deleteInvoice(number) {
-  invoices = invoices.filter((invoice) => invoice.number !== number);
+export function deleteBook(number) {
+  books = books.filter((book) => book.number !== number);
 }
