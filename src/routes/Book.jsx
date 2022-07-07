@@ -13,9 +13,11 @@ function Book() {
       style={{
         width: "30%",
         margin: "1em",
-        padding: "4em",
-        backgroundColor: "#a8a29e",
+        padding: "3em",
+        backgroundColor: "#1e40af",
         borderRadius: "20px",
+        display:"flex",
+        flexDirection:"column",
       }}
     >
       <h2>

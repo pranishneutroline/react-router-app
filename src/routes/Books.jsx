@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Outlet, useSearchParams } from "react-router-dom";
+import Navbar from "../components/Navbar";
 import { getBooks } from "../data";
 import "./book.css"
 
@@ -8,6 +9,8 @@ function Books() {
   let [searchParams,setSearchParams]= useSearchParams();
 
   return (
+    <>
+    <Navbar />
     <div style={{ display: "flex" }}>
       <nav
         style={{
@@ -54,6 +57,7 @@ function Books() {
       </nav>
       <Outlet />
     </div>
+    </>
   );
 }
 
