@@ -9,34 +9,53 @@ function Book() {
   let params = useParams();
   let book = getBook(parseInt(params.bookId, 10));
   return (
-    <div
+    <>
+    {/* <div className="book-container"> */}
+    <a href="/#"
       style={{
         width: "30%",
         margin: "1em",
-        padding: "3em",
-        backgroundColor: "#1e40af",
+        backgroundColor: "#f1f5f9",
+        color:"black",
         borderRadius: "20px",
         display:"flex",
         flexDirection:"column",
-      }}
+        textDecoration:"none",
+      }} 
+      className="product-card card-vertical"
     >
-      <h2>
+      <div className="card-header">
+        <img src={book.img} alt="" />
+      </div>
+      <div className="card-body">
+      <div className="card-description">
+        <h6 className="card-title">
         {" "}
         {book.number} : {book.name}
-      </h2>
-      <p>Price: {book.amount}</p>
-      <p>Categories: {book.category}</p>
-      <p>
-        <button
+        </h6>
+      </div>
+      <div className="card-content">
+      <p className="card-price">Price: {book.amount}</p>
+      <div className="card-genres">
+      <p className="list">Categories: {book.category}</p>
+      </div>
+      </div>
+      </div>
+      {/* <div className="card-cart"> */}
+        <a href="/books" className="btn btn-primary card-cart"
           onClick={() => {
             deleteBook(book.number);
             navigate("/books" + location.search);
+            
           }}
+          
         >
           Delete
-        </button>
-      </p>
-    </div>
+        </a>
+        {/* </div> */}
+      </a>
+      {/* </div> */}
+    </>
   );
 }
 

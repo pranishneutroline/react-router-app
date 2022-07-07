@@ -16,7 +16,7 @@ function App() {
           </h2>
           <h6 className="mt-1">
             <a href="/books" className="btn btn-primary">
-              Show Now
+              Shop Now
             </a>
           </h6>
         </section>

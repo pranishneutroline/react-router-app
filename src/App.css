@@ -9,12 +9,14 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--background-color);
-  color: white;
+  background-color: white;
+  color: black;
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+.color-white{
+    color:white;
+}
 .navbar {
   border-bottom: solid 1px;
   padding-bottom: 1em;
@@ -96,6 +98,7 @@ a {
 .hero-head {
   line-height: 1.1;
   font-size: 2.5rem;
+  color:white;
 }
 .mt-1 {
   margin-top: 1rem;
@@ -118,8 +121,8 @@ a {
 }
 /* genre */
 .genre-container{
-    margin:2.5rem;
     display: flex;
+    margin:2.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
